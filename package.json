@@ -1,0 +1,13 @@
+{
+	"name": "@ChrisTalman/incompatible-identical-types",
+	"version": "1.0.0",
+	"description": "https://stackoverflow.com/questions/58217503/incompatible-identical-types",
+	"dependencies": {
+		"@ChrisTalman/incompatible-identical-types-dependency": "github:ChrisTalman/incompatible-identical-types-dependency",
+		"rethinkdb-ts": "2.4.0-rc.16"
+	},
+	"devDependencies": {
+		"@types/node": "12.7.9",
+		"typescript": "3.6.3"
+	}
+}
