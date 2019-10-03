@@ -10,13 +10,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { r as RethinkDB } from 'rethinkdb-ts';
 import { run } from '@ChrisTalman/incompatible-identical-types-dependency';
+;
 initialise();
 function initialise() {
     return __awaiter(this, void 0, void 0, function* () {
         const query = RethinkDB
             .table('Users')
             .insert({ id: '123', username: 'Test' });
-        yield run(query);
+        const result = yield run(query);
+        console.log(result);
     });
 }
 ;

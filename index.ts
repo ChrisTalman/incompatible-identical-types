@@ -4,11 +4,19 @@
 import { r as RethinkDB } from 'rethinkdb-ts';
 import { run } from '@ChrisTalman/incompatible-identical-types-dependency';
 
+// Types
+interface User
+{
+	id: string;
+	username: string;
+};
+
 initialise();
 async function initialise()
 {
 	const query = RethinkDB
-		.table('Users')
+		.table<User>('Users')
 		.insert({id: '123', username: 'Test'});
-	await run(query);
+	const result = await run(query);
+	console.log(result);
 };
